@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KAUSHALYA: concept demo for a solar-powered smart mini cold storage system for small farmers.">
+  <title>KAUSHALYA | Smart Mini Cold Storage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="KAUSHALYA home">
+      <span class="brand-mark">K</span>
+      <span><strong>KAUSHALYA</strong><small>Predict. Optimize. Protect.</small></span>
+    </a>
+    <nav>
+      <a href="#solution">Solution</a>
+      <a href="#dashboard">Demo Dashboard</a>
+      <a href="#how">How It Works</a>
+    </nav>
+    <a class="nav-cta" href="#dashboard">Explore Demo ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> CONCEPT & DIGITAL SIMULATION</div>
+        <h1>Fresh vegetables.<br><span>Less waste.</span><br>More opportunity.</h1>
+        <p class="hero-text">A proposed solar-powered smart mini cold storage concept designed to help small and marginal farmers temporarily store vegetables near farms and village collection points.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#dashboard">Open Digital Demo</a>
+          <a class="button secondary" href="#solution">Explore the Idea</a>
+        </div>
+        <p class="disclaimer">This is a simulated digital prototype for concept demonstration. It is not connected to a physical cold-storage machine or live sensors.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="sun">☀</div>
+        <div class="solar-panel"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="energy-line">SOLAR ENERGY ↓</div>
+        <div class="storage-unit">
+          <div class="unit-top"><span>KAUSHALYA</span><span class="status-dot"></span></div>
+          <div class="unit-door"><div class="door-display"><small>SIMULATED TEMP</small><strong id="heroTemp">6.0°C</strong><span>CONCEPT MODEL</span></div><div class="handle"></div></div>
+          <div class="unit-bottom"><span></span><span></span></div>
+        </div>
+        <div class="visual-caption">Solar-powered • Portable concept • Farmer-focused</div>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Concept design targets">
+      <div><strong>30–50 kg</strong><span>Target storage capacity</span></div>
+      <div><strong>Solar + Battery</strong><span>Proposed energy system</span></div>
+      <div><strong>IoT Ready</strong><span>Planned monitoring concept</span></div>
+      <div><strong>Farmer First</strong><span>Simple local-use design</span></div>
+    </section>
+
+    <section class="section" id="solution">
+      <div class="section-heading">
+        <div class="eyebrow">THE PROPOSED SOLUTION</div>
+        <h2>Designed around the farmer's needs</h2>
+        <p>A concept for reducing avoidable post-harvest losses where reliable cold-storage access is limited.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">☀️</div><h3>Solar-assisted power</h3><p>Proposed solar panel, charge controller and battery to support cooling when grid power is unreliable.</p></article>
+        <article class="feature-card"><div class="feature-icon">🌡️</div><h3>Smart monitoring</h3><p>Planned temperature, humidity, door and battery monitoring using sensors and an ESP32 controller.</p></article>
+        <article class="feature-card"><div class="feature-icon">🥬</div><h3>Temporary produce storage</h3><p>A target capacity of 30–50 kg for vegetables before transport or sale, subject to engineering validation.</p></article>
+        <article class="feature-card"><div class="feature-icon">📊</div><h3>Decision support</h3><p>Future software could show alerts and support store-versus-sell decisions using crop and market information.</p></article>
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="dashboard">
+      <div class="section-heading dashboard-heading">
+        <div><div class="eyebrow">INTERACTIVE DEMO</div><h2>Cold Storage Dashboard</h2><p>Explore example readings and sample alerts. Values are simulated, not live sensor data.</p></div>
+        <span class="sim-badge"><span class="pulse"></span> SIMULATION MODE</span>
+      </div>
+      <div class="dashboard-layout">
+        <div class="dashboard-main">
+          <div class="dashboard-topline"><div><strong>KAUSHALYA Unit 01</strong><small>Demo monitoring panel</small></div><span class="online-pill">● Demo Active</span></div>
+          <div class="sensor-grid">
+            <article class="sensor-card"><div class="sensor-label">Temperature <span>🌡️</span></div><div class="sensor-value" id="temperature">6.0 <small>°C</small></div><div class="sensor-note" id="tempNote">Example reading</div><div class="mini-track"><span id="tempBar" style="width:42%"></span></div></article>
+            <article class="sensor-card"><div class="sensor-label">Humidity <span>💧</span></div><div class="sensor-value" id="humidity">78 <small>%</small></div><div class="sensor-note">Example reading</div><div class="mini-track"><span id="humidityBar" style="width:78%"></span></div></article>
+            <article class="sensor-card"><div class="sensor-label">Battery <span>🔋</span></div><div class="sensor-value" id="battery">84 <small>%</small></div><div class="sensor-note" id="batteryNote">Example charge level</div><div class="mini-track"><span id="batteryBar" style="width:84%"></span></div></article>
+            <article class="sensor-card"><div class="sensor-label">Solar Input <span>☀️</span></div><div class="sensor-value" id="solar">126 <small>W</small></div><div class="sensor-note" id="solarNote">Illustrative output</div><div class="mini-track"><span id="solarBar" style="width:63%"></span></div></article>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title"><div><strong>Temperature Trend</strong><small>Illustrative recent readings</small></div><span class="chart-key"><i></i> Temperature</span></div>
+            <div class="chart" id="chart">
+              <div class="chart-y"><span>10°C</span><span>8°C</span><span>6°C</span><span>4°C</span><span>2°C</span></div>
+              <div class="chart-plot">
+                <div class="chart-gridlines"><i></i><i></i><i></i><i></i><i></i></div>
+                <svg viewBox="0 0 600 180" preserveAspectRatio="none" role="img" aria-label="Illustrative temperature trend chart"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#27a879" stop-opacity=".24"/><stop offset="100%" stop-color="#27a879" stop-opacity="0"/></linearGradient></defs><path id="chartArea" d="M0,95 L75,105 L150,82 L225,92 L300,65 L375,77 L450,59 L525,69 L600,55 L600,180 L0,180 Z" fill="url(#area)"/><polyline id="chartLine" points="0,95 75,105 150,82 225,92 300,65 375,77 450,59 525,69 600,55" fill="none" stroke="#27a879" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="chart-x"><span>09:00</span><span>10:00</span><span>11:00</span><span>12:00</span><span>13:00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="dashboard-side">
+          <div class="side-card"><div class="side-title"><span>⚠️</span><strong>Demo Alerts</strong></div><div class="alert-item"><span class="alert-dot green"></span><div><strong id="alertTitle">Conditions look stable</strong><p id="alertText">Sample values are within this demo's illustrative range.</p></div></div><div class="side-foot">Alerts are illustrative only.</div></div>
+          <div class="side-card"><div class="side-title"><span>🧠</span><strong>Smart Recommendation</strong></div><p class="recommendation" id="recommendation">Continue monitoring temperature and battery level. Confirm crop-specific storage needs before real use.</p><div class="recommendation-tag">CONCEPT ADVISORY</div></div>
+          <div class="side-card control-card"><div class="side-title"><span>🎛️</span><strong>Try the Simulation</strong></div><label for="scenario">Choose a demo scenario</label><select id="scenario"><option value="normal">Normal example conditions</option><option value="hot">High temperature warning</option><option value="low">Low battery warning</option><option value="cloudy">Low solar input</option></select><button class="button primary full" id="runScenario">Run Scenario</button><button class="button secondary full" id="resetScenario">Reset Demo</button><p class="tiny-note">This changes sample values only. It does not control hardware.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-heading"><div class="eyebrow">HOW IT COULD WORK</div><h2>From sunlight to smarter decisions</h2><p>Proposed architecture; component selection and performance need testing.</p></div>
+      <div class="flow">
+        <div class="flow-step"><span>01</span><strong>Solar Panel</strong><small>Collect energy</small></div><b>→</b>
+        <div class="flow-step"><span>02</span><strong>Controller + Battery</strong><small>Manage stored power</small></div><b>→</b>
+        <div class="flow-step"><span>03</span><strong>Cooling Chamber</strong><small>Maintain target conditions</small></div><b>→</b>
+        <div class="flow-step"><span>04</span><strong>Sensors + ESP32</strong><small>Monitor conditions</small></div><b>→</b>
+        <div class="flow-step"><span>05</span><strong>Dashboard</strong><small>Display alerts</small></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div><div class="eyebrow">NEXT DEVELOPMENT STAGE</div><h2>From concept demo to tested prototype</h2><p>Planned next steps: validate cooling requirements, select components, build a safe small-scale prototype, and test it with real sensors.</p></div>
+      <a class="button light" href="#dashboard">Try the Demo ↑</a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">K</span><span><strong>KAUSHALYA</strong><small>Predict. Optimize. Protect.</small></span></a><p>Concept proposal for smart, solar-assisted vegetable storage.</p><p class="footer-note">Disclaimer: This website is a concept presentation and simulated dashboard. No physical machine, live sensor integration, verified performance, or actual market-price AI is represented as completed.</p><span class="copyright">© 2026 KAUSHALYA Project Demo</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
